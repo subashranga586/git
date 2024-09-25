@@ -1,0 +1,315 @@
+
+dir
+ 107  ls -ltr
+ 108  git remote
+ 109  vi readme
+ 110  ls -ltr
+ 111  git status
+ 112  git add .
+ 113  git status
+ 114  git rm --cached readme
+ 115  git status
+ 116  git add .
+ 117  git status
+ 118  git commit -m "first readme file"
+ 119  git config --global user.email "subashranga586@gmail.com"
+ 120  git config --global user.name "subashranga586"
+ 121  git commit -m "First Commit"
+ 122  git status
+ 123  git branch
+ 124  git push .
+ 125  git push
+ 126  git remote -v
+ 127  pwd
+ 128  pwd
+ 129  cd /usr
+ 130  cd C:\Users\subas\GIT
+ 131  cd c:
+ 132  cd Users/subas/GIT/
+ 133  git remove -v
+ 134  git remote -v
+ 135  ls -ltr
+ 136  cd Jenkins/
+ 137  git remote -v
+ 138  git remote add origin https://github.com/subashranga586/Jenkins.git
+ 139  git push --set-upstream origin master
+ 140  pwd
+ 141  git push
+ 142  git status
+ 143  ls -ltr
+ 144  cat readme
+ 145  git pull
+ 146  cat readme
+ 147  vi readme
+ 148  git status
+ 149  git add readme
+ 150  git status
+ 151  ls -ltr
+ 152  git commit -m "my second commit"
+ 153  git push
+ 154  git pull
+ 155  cat readme
+ 156  cd C:\Users\subas\GIT
+ 157  ls -ltr
+ 158  cd ..
+ 159  pwd
+ 160  ls -ltr
+ 161  chmod 400 DevOps.pem
+ 162  ssh -i "DevOps.pem" ec2-user@ec2-52-221-201-124.ap-southeast-1.compute.amazonaws.com
+ 163  cd C:
+ 164  cd Users/subas/GIT/
+ 165  ls -ltr
+ 166  ssh -i "DevOps.pem" ec2-user@ec2-52-221-201-124.ap-southeast-1.compute.amazonaws.com
+ 167  pwd
+ 168  ssh -i "DevOps.pem" ec2-user@ec2-18-139-217-43.ap-southeast-1.compute.amazonaws.com
+ 169  ssh -i "DevOps.pem" ubuntu@ec2-54-254-93-119.ap-southeast-1.compute.amazonaws.com
+ 170  ssh -i "DevOps.pem" ubuntu@ec2-54-254-93-119.ap-southeast-1.compute.amazonaws.com
+ 171  ssh -i "DevOps.pem" ec2-user@ec2-54-251-137-189.ap-southeast-1.compute.amazonaws.com
+ 172  pwd
+ 173  git status
+ 174  ls -ltr
+ 175  cd Jenkins/
+ 176  git status
+ 177  ls -ltr
+ 178  cat >> readme
+ 179  git status
+ 180  vi readme
+ 181  git status
+ 182  history
+
+
+
+#!/bin/bash
+
+# Git End-to-End Workflow Script with Commands and Comments
+
+# 1. Set up Git User Configuration (Global)
+git config --global user.name "Your Name"  # Replace with your name
+git config --global user.email "youremail@example.com"  # Replace with your email
+
+# 2. Initialize a New Git Repository (run this in a project directory)
+git init  # Initializes an empty Git repository
+
+# 3. Clone a Remote Repository
+git clone https://github.com/username/repo.git  # Replace with the actual URL of your repository
+
+# 4. Add Files to Staging Area
+git add <file-name>  # Replace with the specific file name
+git add .            # Adds all modified or new files
+
+# 5. Check the Status of the Working Directory
+git status  # Shows the current state of the working directory and staging area
+
+# 6. Commit Changes Locally
+git commit -m "Your commit message"  # Replace with a meaningful commit message
+
+# 7. View Commit History
+git log  # Shows the commit history with details of each commit
+
+# 8. Push Changes to Remote Repository
+git push origin <branch-name>  # Pushes changes to the specified branch (replace branch name)
+
+# 9. Pull Changes from Remote Repository
+git pull origin <branch-name>  # Fetches and merges changes from the remote branch
+
+# 10. Branching Commands
+
+# Create a new branch
+git branch <new-branch>  # Replace with the new branch name
+
+# Switch to the new branch
+git checkout <new-branch>  # Replaces the current working branch
+
+# Create and switch to a new branch in one command
+git checkout -b <new-branch>  # Shortcut to create and switch to a new branch
+
+# Merge the new branch into the current branch
+git merge <branch-to-merge>  # Merge another branch into the current one
+
+# Delete a local branch
+git branch -d <branch-name>  # Deletes the branch once merged and no longer needed
+
+# 11. Stashing Commands
+
+# Temporarily save changes that you don’t want to commit yet
+git stash  # Stashes uncommitted changes
+
+# Apply the stashed changes back to your working directory
+git stash apply  # Re-applies the last stashed changes
+
+# List all stashed changes
+git stash list  # Displays a list of all the saved stash entries
+
+# 12. Resetting & Reverting
+
+# Unstage a file from the staging area (without losing changes)
+git reset <file-name>  # Removes the file from the staging area
+
+# Revert a specific commit (creates a new commit that undoes the changes)
+git revert <commit-hash>  # Replace with the hash of the commit you want to revert
+
+# Hard reset to a previous commit (destructive; removes all changes after the commit)
+git reset --hard <commit-hash>  # Use cautiously; resets to the specified commit
+
+# 13. Tagging for Releases
+
+# Create an annotated tag (versioning)
+git tag -a v1.0 -m "Version 1.0"  # Replace with the version and message
+
+# Push tags to remote repository
+git push origin --tags  # Sends tags to the remote repository
+
+# 14. Working with Remotes
+
+# Add a remote repository
+git remote add origin https://github.com/username/repo.git  # Replace with the actual repository URL
+
+# List the remote repositories linked to your local repository
+git remote -v  # Displays the URL of the remote repositories
+
+# Remove a remote repository
+git remote remove <remote-name>  # Removes the specified remote
+
+# 15. Git Troubleshooting Commands
+
+# Force pull the latest changes from the remote and overwrite local changes
+git fetch origin
+git reset --hard origin/<branch-name>  # Forces the local branch to mirror the remote
+
+# Amend the last commit (useful if you forgot to add a file)
+git add <file-name>  # Add the forgotten file
+git commit --amend   # Modify the most recent commit without creating a new one
+
+# Force push (use with caution as it overwrites remote changes)
+git push --force origin <branch-name>  # Force-push to the remote branch
+
+# Reset the last commit (keeping changes in working directory)
+git reset --soft HEAD~1  # Removes the last commit but keeps changes for editing
+
+# Clean untracked files (removes files not tracked by Git)
+git clean -f  # Use -n to preview changes without deleting
+
+# Rebasing branch (use for cleaner commit history)
+git rebase <branch-name>  # Replays commits on top of another branch
+
+# Show differences between commits
+git diff <commit-hash> <commit-hash>  # Compare differences between two commits
+
+# 16. Common Errors and Fixes
+
+# Fixing "error: failed to push some refs"
+git pull origin <branch-name> --rebase  # Pull latest changes before pushing
+
+# Fixing "detached HEAD"
+git checkout <branch-name>  # Re-attaches HEAD to a branch
+
+# Fixing merge conflicts
+# After editing conflicting files:
+git add <file-name>  # Stage the resolved files
+git commit -m "Resolved merge conflicts"  # Commit the conflict resolution
+
+# Fixing "fatal: refusing to merge unrelated histories"
+git pull origin <branch-name> --allow-unrelated-histories  # Allows merging unrelated histories
+
+# 1. Git Staging
+# -------------------------------------
+# Assume you're working in a Git repository with untracked/unstaged changes.
+
+# Check the status of your working directory
+git status
+
+# Add files to the staging area
+git add <filename>   # Add a specific file
+git add .            # Add all files to the staging area
+
+# View staged files
+git status           # Shows which files are staged and ready for commit
+
+# 2. Git Commit
+# -------------------------------------
+# Commit the staged changes
+git commit -m "Added new feature X"
+
+# 3. Git Rebase
+# -------------------------------------
+# Let's say you want to rebase your current branch on top of another branch (e.g., `main`).
+# This operation applies your current branch commits on top of `main`.
+
+# Switch to the feature branch if not already there
+git checkout feature-branch
+
+# Fetch the latest changes from the remote
+git fetch origin
+
+# Start the rebase onto `main` branch
+git rebase main
+
+# If there are any conflicts during the rebase, Git will pause and notify you.
+
+# 4. Resolve Merge/Rebase Conflicts
+# -------------------------------------
+# In case of conflicts, Git will mark the files with conflicts, and you'll see something like:
+# <<<<<<< HEAD
+# Code from the current branch
+# =======
+# Code from the branch you're rebasing onto
+# >>>>>>> main
+
+# Manually edit the conflicted files to resolve the differences.
+# Remove the conflict markers `<<<<<<<`, `=======`, `>>>>>>>`.
+
+# After resolving conflicts, stage the resolved files
+git add <conflicted-file>
+
+# Continue the rebase process
+git rebase --continue
+
+# If you want to abort the rebase, you can run:
+# git rebase --abort
+
+# 5. Cherry-Picking a Commit
+# -------------------------------------
+# Sometimes you may want to take a specific commit from another branch and apply it to your current branch.
+# You can use `cherry-pick` to do this.
+
+# First, identify the commit hash that you want to cherry-pick using `git log`.
+git log --oneline    # Shows the short hash of commits
+
+# Cherry-pick the specific commit into the current branch
+git cherry-pick <commit-hash>
+
+# Git will apply the changes from the cherry-picked commit to your current branch.
+
+# 6. Checking Out a Specific Commit (detached HEAD)
+# -------------------------------------
+# If you want to temporarily inspect or work with a specific commit (without changing the branch),
+# you can check out a commit by its hash.
+
+git checkout <commit-hash>
+
+# This puts you in a "detached HEAD" state. You are now at that specific commit,
+# but not on any branch. Be careful: any changes you make won't belong to a branch unless you create one.
+
+# To return to your branch, simply run:
+git checkout <branch-name>
+
+# 7. Undoing Changes
+# -------------------------------------
+# To undo staged changes before committing, you can use:
+git reset HEAD <filename>   # Unstage specific file
+git reset HEAD              # Unstage all files
+
+# To undo changes in a tracked file:
+git checkout -- <filename>
+
+# 8. Merging and Resolving Conflicts
+# -------------------------------------
+# Let's say you want to merge another branch (e.g., `feature-branch`) into your current branch.
+git checkout main
+git merge feature-branch
+
+# If there are conflicts, Git will notify you of the conflicting files.
+# Again, edit the conflicted files to resolve the conflicts, then stage the resolved files.
+
+git add <conflicted-file>
+git commit -m "Resolved merge conflict between main and feature-branch"
