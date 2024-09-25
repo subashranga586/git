@@ -292,6 +292,8 @@ git checkout -- <filename>
 # Let's say you want to merge another branch (e.g., `feature-branch`) into your current branch.
 git checkout main
 git merge feature-branch
+## you can check out a commit by its hash.
+git checkout <commit-hash>
 
 # If there are conflicts, Git will notify you of the conflicting files.
 # Again, edit the conflicted files to resolve the conflicts, then stage the resolved files.
