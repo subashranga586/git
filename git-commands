@@ -54,18 +54,7 @@ dir
  158  cd ..
  159  pwd
  160  ls -ltr
- 161  chmod 400 DevOps.pem
- 162  ssh -i "DevOps.pem" ec2-user@ec2-52-221-201-124.ap-southeast-1.compute.amazonaws.com
  163  cd C:
- 164  cd Users/subas/GIT/
- 165  ls -ltr
- 166  ssh -i "DevOps.pem" ec2-user@ec2-52-221-201-124.ap-southeast-1.compute.amazonaws.com
- 167  pwd
- 168  ssh -i "DevOps.pem" ec2-user@ec2-18-139-217-43.ap-southeast-1.compute.amazonaws.com
- 169  ssh -i "DevOps.pem" ubuntu@ec2-54-254-93-119.ap-southeast-1.compute.amazonaws.com
- 170  ssh -i "DevOps.pem" ubuntu@ec2-54-254-93-119.ap-southeast-1.compute.amazonaws.com
- 171  ssh -i "DevOps.pem" ec2-user@ec2-54-251-137-189.ap-southeast-1.compute.amazonaws.com
- 172  pwd
  173  git status
  174  ls -ltr
  175  cd Jenkins/
@@ -76,11 +65,7 @@ dir
  180  vi readme
  181  git status
  182  history
-
-
-
 #!/bin/bash
-
 # Git End-to-End Workflow Script with Commands and Comments
 
 # 1. Set up Git User Configuration (Global)
